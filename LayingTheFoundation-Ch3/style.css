@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+input {
+    width: 50%;
+    height: 2rem;
+    border-radius: 12rem;
+    text-align: center;
+}
+
+.user-icon {
+    height: 1.5rem;
+    cursor: pointer;
+}
