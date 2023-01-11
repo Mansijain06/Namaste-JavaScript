@@ -1,31 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./style.css";
+//Put all the hardcoded thing in this file
 
-const Header = () => {
-  return (
-    <div className="header">
-      <img
-        className="logo"
-        alt="Food Villa"
-        src="https://lh3.googleusercontent.com/p/AF1QipMf9w4RomHXrUkQKvrxtPdjp3SLadP05HDzXlH2=w1080-h608-p-no-v0"
-      />
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>Contact Us</li>
-          <li>cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+export const IMG_CDN_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-const Footer = () => {
-  return <div>Footer</div>;
-};
-
-const resturantList = [
+export const resturantList = [
   {
     type: "restaurant",
     data: {
@@ -2108,40 +2086,3 @@ const resturantList = [
     subtype: "basic",
   },
 ];
-
-const ResturantCard = ({ name, cloudinaryImageId, cuisines, avgRating }) => {
-  return (
-    <div className="card">
-      <img
-        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
-        alt="card-img"
-      />
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRating}</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="resturant-list">
-      {resturantList.map((resturant) => {
-        return <ResturantCard {...resturant.data} key={resturant.data.id} />;
-      })}
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <Body />
-      <Footer />
-    </React.Fragment>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
