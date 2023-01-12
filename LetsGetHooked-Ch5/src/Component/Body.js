@@ -13,12 +13,12 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [resturants, setResturants] = useState(resturantList);
   return (
-    <>
+    <div className="body-container">
       <div className="search-container">
         <input
           type="text"
           className="search-input"
-          placeholder="search"
+          placeholder="Enter name of resturant"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -40,7 +40,7 @@ const Body = () => {
           return <ResturantCard {...resturant.data} key={resturant.data.id} />;
         })}
       </div>
-    </>
+    </div>
   );
 };
 
