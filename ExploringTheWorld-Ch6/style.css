@@ -61,20 +61,23 @@
     border: none;
     border-radius: 1rem;
     color: white;
-    
     background-color: rgb(168, 78, 206);
 }
 
 .shimmer-container {
-    display: block;
+    display: contents;
     justify-content: center;
     align-items: center;
 }
+
 .shimmer-resturants {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
+    -webkit-mask:linear-gradient(-60deg,rgb(207, 191, 191) 30%,rgba(175, 164, 164, 0.333),rgb(190, 152, 152) 70%) right/350% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
 }
 
 .shimmer-search {
@@ -82,8 +85,6 @@
     height: 2rem;
     margin: auto;
     background-color: lightgray;
-    align-items: center;
-    text-align: center;
 }
 
 .shimmer-card {
@@ -91,4 +92,8 @@
     height: 250px;
     background-color: lightgray;
     margin: 1rem;
+}
+
+@keyframes shimmer {
+   100% {-webkit-mask-position:left}
 }
