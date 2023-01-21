@@ -1,0 +1,30 @@
+{
+  "name": "exploringtheworld-ch6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mansijain06/Namaste-React.git"
+  },
+  "author": "Mansi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mansijain06/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/Mansijain06/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0"
+  }
+}
