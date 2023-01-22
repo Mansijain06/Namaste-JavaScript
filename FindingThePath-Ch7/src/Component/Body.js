@@ -18,7 +18,7 @@ const Body = () => {
   useEffect(() => {
     getResturants();
   }, []);
-  console.log(useEffect);
+  console.log(useState());
   async function getResturants() {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.73651&lng=75.889219&page_type=DESKTOP_WEB_LISTING"
@@ -67,8 +67,11 @@ const Body = () => {
         <div className="resturant-list">
           {filteredResturants.map((resturant) => {
             return (
-              <Link to={"/resturant/" + resturant.data.id}>
-                <ResturantCard {...resturant.data} key={resturant.data.id} />
+              <Link
+                to={"/resturant/" + resturant.data.id}
+                key={resturant.data.id}
+              >
+                <ResturantCard {...resturant.data} />
               </Link>
             );
           })}

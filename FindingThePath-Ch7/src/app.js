@@ -11,6 +11,8 @@ import Footer from "./Component/Footer";
 import Error from "./Component/Error";
 import Details from "./Details";
 import ResturantMenu from "./Component/ResturantMenu";
+import Login from "./Component/Login";
+
 const AppLayout = () => {
   return (
     <React.Fragment>
@@ -50,6 +52,10 @@ const routes = createBrowserRouter([
         element: <ResturantMenu />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 
