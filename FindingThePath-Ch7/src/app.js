@@ -12,6 +12,7 @@ import Error from "./Component/Error";
 import Details from "./Details";
 import ResturantMenu from "./Component/ResturantMenu";
 import Login from "./Component/Login";
+import Profile from "./Component/Profile";
 
 const AppLayout = () => {
   return (
@@ -34,11 +35,17 @@ const routes = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contact />,
         children: [
           {
@@ -48,13 +55,13 @@ const routes = createBrowserRouter([
         ],
       },
       {
-        path: "/resturant/:resId",
+        path: "resturant/:resId",
         element: <ResturantMenu />,
       },
     ],
   },
   {
-    path: "/login",
+    path: "login",
     element: <Login />,
   },
 ]);
