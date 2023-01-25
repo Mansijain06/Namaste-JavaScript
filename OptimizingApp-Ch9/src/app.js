@@ -13,7 +13,6 @@ import Details from "./Details";
 import ResturantMenu from "./Component/ResturantMenu";
 import Login from "./Component/Login";
 import Profile from "./Component/Profile";
-import Shimmer from "./Component/Shimmer";
 
 const About = lazy(() => import("./Component/About"));
 //when we load component in demand react tries to suspend it
