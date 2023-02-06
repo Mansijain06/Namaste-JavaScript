@@ -27,7 +27,9 @@ const Header = () => {
           <Link to="/instamart" className="mr-8">
             <li>Instamart</li>
           </Link>
-          <li>cart - {cartItems.length}</li>
+          <Link to="/cart" className="mr-8">
+            <li>cart - {cartItems.length}</li>
+          </Link>
         </ul>
       </div>
     </div>

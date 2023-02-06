@@ -16,6 +16,7 @@ import Profile from "./Component/Profile";
 import Instamart from "./Component/Instamart";
 import UserContext from "./utils/UserContext";
 import store from "./utils/store";
+import Cart from "./Component/Cart";
 
 const About = lazy(() => import("./Component/About"));
 //when we load component in demand react tries to suspend it
@@ -77,6 +78,10 @@ const routes = createBrowserRouter([
       {
         path: "resturant/:resId",
         element: <ResturantMenu />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
       },
     ],
   },
